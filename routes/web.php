@@ -20,5 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/admin/users','AdminController');
-
+Route::resource('/brand','BrandController');
+Route::get('delete/{id}','BrandController@destroy');
+Route::resource('/category','CategoryController');
+Route::get('/delete/{id}','CategoryController@destroy');
+Route::resource('/supplier','SupplierController');
+Route::get('/delete/{id}','SupplierController@destroy');
