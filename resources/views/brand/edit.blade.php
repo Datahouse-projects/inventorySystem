@@ -1,8 +1,11 @@
 @extends('layouts.app')
+@section('header')
+    <h1 >brand / edit</h1>
+@endsection
 @section('content')
     <div class="col-md-6" style="margin: 0 auto;">
 
-    <h1 class="text-dark">Edit brand</h1>
+
     {!! Form::model($brand,['method'=>'PATCH','action'=>['BrandController@update',$brand->id]]) !!}
         <div class="form-group">
              {!! Form::label('Brand name:') !!}

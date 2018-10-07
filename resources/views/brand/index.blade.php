@@ -1,15 +1,13 @@
+@section('header')
+    <h1 >brand / Home</h1>
+@endsection
 @extends ('layouts.app')
-
-
-
-
 @section('content')
-    <div class="center-block">
-    <h1 class="text-black-50 text-center">Welcome to brands</h1>
-    <a href="{{route('brand.create')}}">
-        <button  class="btn btn-primary btn-lg right" style="float: right; margin-bottom:10px">New</button>
+    <div id="table" >
+    <a id="add" href="{{route('brand.create')}}">
+        <button  class="btn btn-success  right" style="float: right; margin-bottom:10px">New</button>
     </a>
-    <table class="table table-striped" >
+    <table class="table table-bordered" >
     @foreach($brands as $brand)
         <tr>
             <td>{{$brand->name}}</td>
@@ -20,7 +18,7 @@
             </td>
 
             <td>
-                <a href="delete/{{$brand->id}}">
+                <a href="deletebrand/{{$brand->id}}">
                 <i class="fa fa-trash"></i>
                 </a>
             </td>

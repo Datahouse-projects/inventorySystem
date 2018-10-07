@@ -1,5 +1,5 @@
 <?php
-use App\InventoryProductGroup;
+use App\InventoryProduct;
 use App\InventoryOrderHeader;
 use App\InventoryProductVariety;
 use App\InventoryWarehouse;
@@ -21,8 +21,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/brand','BrandController');
-Route::get('delete/{id}','BrandController@destroy');
+Route::get('deletebrand/{id}','BrandController@destroy');
 Route::resource('/category','CategoryController');
-Route::get('/delete/{id}','CategoryController@destroy');
+Route::get('/deletecategory/{id}','CategoryController@destroy');
 Route::resource('/supplier','SupplierController');
-Route::get('/delete/{id}','SupplierController@destroy');
+Route::get('/deletesupplier/{id}','SupplierController@destroy');
+Route::resource('/product','ProductController');
+Route::get('/deleteproduct/{id}','ProductController@destroy');
+Route::resource('/item','ItemController');
+Route::get('/deleteitem/{id}','ItemController@destroy');
+Route::resource('/order','OrderController');
+Route::get('/deleteorder/{id}','OrderController@destroy');
+Route::resource('/warehouse','WarehouseController');
+Route::get('/deletewarehouse/{id}','WarehouseController@destroy');
+
+

@@ -15,8 +15,13 @@ class InventoryProduct extends Model
     public function groups(){
         return $this->belongsTo('App\InventoryProductGroup','product_group_id');
     }
-    public function  brands(){
+    public function brands(){
         return $this->belongsTo('App\InventoryBrand','brand_id');
     }
+    public  function  scopeOwner($query,$id){
+        return  $query->where('id',$id);
+    }
+
+
 
 }

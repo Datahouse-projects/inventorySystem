@@ -60,6 +60,18 @@ class InventoryStockSeeder extends Seeder
             "reorder_level"=>500
         ]);
         DB::table('inventory_stocks')->insert([
+            "product_variety_id"=>5,
+            "warehouse_id"=>1,
+            "stock_level"=>5000,
+            "reorder_level"=>500
+        ]);
+        DB::table('inventory_stocks')->insert([
+            "product_variety_id"=>5,
+            "warehouse_id"=>2,
+            "stock_level"=>5000,
+            "reorder_level"=>500
+        ]);
+        DB::table('inventory_stocks')->insert([
             "product_variety_id"=>6,
             "warehouse_id"=>1,
             "stock_level"=>5000,
@@ -115,18 +127,6 @@ class InventoryStockSeeder extends Seeder
         ]);
         DB::table('inventory_stocks')->insert([
             "product_variety_id"=>10,
-            "warehouse_id"=>2,
-            "stock_level"=>5000,
-            "reorder_level"=>500
-        ]);
-        DB::table('inventory_stocks')->insert([
-            "product_variety_id"=>11,
-            "warehouse_id"=>1,
-            "stock_level"=>5000,
-            "reorder_level"=>500
-        ]);
-        DB::table('inventory_stocks')->insert([
-            "product_variety_id"=>11,
             "warehouse_id"=>2,
             "stock_level"=>5000,
             "reorder_level"=>500

@@ -36,7 +36,14 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $supplier=new  InventorySupplier();
+        $supplier->name=$request->name;
+        $supplier->address=$request->address;
+        $supplier->location=$request->location;
+        $supplier->telephone=$request->telephone;
+        $supplier->email=$request->email;
+        $supplier->save();
+        return redirect('/supplier');
     }
 
     /**
@@ -58,7 +65,8 @@ class SupplierController extends Controller
      */
     public function edit($id)
     {
-        //
+        $supplier=InventorySupplier::findOrFail($id);
+        return view('supplier.edit',compact('supplier'));
     }
 
     /**
@@ -70,7 +78,14 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $supplier=InventorySupplier::findOrFail($id);
+        $supplier->name=$request->name;
+        $supplier->address=$request->address;
+        $supplier->location=$request->location;
+        $supplier->telephone=$request->telephone;
+        $supplier->email=$request->email;
+        $supplier->save();
+        return redirect('/supplier');
     }
 
     /**
@@ -81,6 +96,9 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $supplier=InventorySupplier::findOrFail($id);
+        $supplier->delete();
+        return redirect('/supplier');
+
     }
 }

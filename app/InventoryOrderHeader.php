@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class InventoryOrderHeader extends Model
 {
     protected $fillable=[
+        'order_code',
         'supplier_id',
         'purchase_date',
         'total_amount'

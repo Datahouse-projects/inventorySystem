@@ -20,6 +20,7 @@ class CreateInventorySuppliersTable extends Migration
             $table->string('address');
             $table->string('telephone');
             $table->string('email');
+            $table->timestamps();
         });
     }
 

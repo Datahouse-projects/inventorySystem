@@ -16,6 +16,7 @@ class CreateInventoryOrderHeadersTable extends Migration
         Schema::create('inventory_order_headers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('supplier_id');
+            $table->string('order_code');
             $table->date('purchase_date');
             $table->decimal('total_amount',10,2);
             $table->timestamps();

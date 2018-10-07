@@ -1,8 +1,9 @@
 @extends('layouts.app')
-
+@section('header')
+    <h1 >brand / create</h1>
+@endsection
 @section('content')
     <div class="col-md-6 " style="margin:0 auto">
-    <h1 class="text-center">Create Brand</h1>
     {!! Form::open(["method"=>"post","action"=>"BrandController@store","class"=>"form-horizontal"]) !!}
     <div class="form-group">
     {!! Form::label('name','Brand name: ')!!}

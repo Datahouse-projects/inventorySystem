@@ -1,7 +1,43 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: cretus
- * Date: 9/30/18
- * Time: 11:13 PM
- */
+@extends('layouts.app')
+@section('header')
+    <h1 >supplier / edit</h1>
+@endsection
+@section('content')
+    <div class="col-md-6" style="margin: 0 auto">
+        {!! Form::model($supplier,['method'=>'PATCH','action'=>['SupplierController@update',$supplier->id],'class'=>'form-horizontal']) !!}
+        <div class="form-group">
+            {!! Form::label('name','Name:',['class'=>'control-label col-xs-2']) !!}
+            <div class="col-xs-8">
+                {!! Form::text('name',null,['class'=>'form-control ']) !!}
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('address','Address:',['class'=>'control-label col-xs-2']) !!}
+            <div class="col-xs-10">
+                {!! Form::text('address',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('location','Location:',['class'=>'control-label col-xs-2']) !!}
+            <div class="col-xs-10">
+                {!! Form::text('location',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('telephone','Telephone:',['class'=>'control-label col-xs-2']) !!}
+            <div class="col-xs-10">
+                {!! Form::text('telephone',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('email','Email:',['class'=>'control-label col-xs-2']) !!}
+            <div class="col-xs-10">
+                {!! Form::text('email',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control">Create</button>
+        </div>
+        {!! Form::close() !!}
+    </div>
+@endsection

@@ -35,7 +35,7 @@ class InventoryProductVariety extends Model
             'supplier_id')->withPivot('lead_time')->using('App\InventoryOrderInfo');
     }
     public  function  orderlines(){
-        return $this->belongsToMany('App\InventoryProductVariety','inventory_order_lines',
+        return $this->belongsToMany('App\InventoryOrderHeader','inventory_order_lines',
             'product_variety_id',
             'order_header_id')->withPivot('total_amount','has_vat','quantity','manufacture_date',
             'expire_date');

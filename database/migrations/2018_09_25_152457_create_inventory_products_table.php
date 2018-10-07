@@ -19,7 +19,7 @@ class CreateInventoryProductsTable extends Migration
             $table->integer('brand_id');
             $table->string('name');
             $table->string('product_code');
-            $table->tinyInteger('has_lots');
+            $table->tinyInteger('has_lots')->default(1);
             $table->string('default_uom');
             $table->timestamps();
         });
