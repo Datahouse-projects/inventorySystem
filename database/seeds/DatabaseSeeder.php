@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(InventoryProductVarietySeeder::class);
         $this->call(InventoryWarehouseSeeder::class);
         $this->call(InventoryStockSeeder::class);
-        $this->call(InventoryProductDiscountSeeder::class);
+        //$this->call(InventoryProductDiscountSeeder::class);
         $this->call(InventoryPriceSeeder::class);
         $this->call(InventorySupplierSeeder::class);
         $this->call(InventoryOrderInfoSeeder::class);
@@ -26,5 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call(InventoryOrderLineSeeder::class);
         $this->call(InventoryProductPromotionSeeder::class);
         $this->call(InventoryDiscountVarietySeeder::class);
+        $this->call(InventoryBatchSeeder::class);
+        $this->call(InventorySettingSeeder::class);
     }
 }

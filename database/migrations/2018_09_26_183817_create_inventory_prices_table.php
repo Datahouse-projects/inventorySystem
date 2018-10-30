@@ -15,8 +15,8 @@ class CreateInventoryPricesTable extends Migration
     {
         Schema::create('inventory_prices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_variety_id');
-            $table->date('from_date');
+            $table->integer('batch_id')->nullable();
+            $table->date('from_date')->nullable();
             $table->date('to_date')->nullable();
             $table->decimal('product_price',10,2);
             $table->timestamps();

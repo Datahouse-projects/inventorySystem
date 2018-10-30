@@ -18,7 +18,7 @@ class CreateInventoryProductVarietiesTable extends Migration
             $table->integer('product_id');
             $table->float('unit_measure'); //unit of measure
             $table->string('package_material');
-            $table->decimal('unit_price',10,2);
+           // $table->decimal('unit_price',10,2);
             $table->timestamps();
         });
     }

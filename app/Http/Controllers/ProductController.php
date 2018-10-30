@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\InventoryCategory;
 use App\InventoryProductGroup;
 use App\InventoryBrand;
+use App\InventoryPrice;
 
 class ProductController extends Controller
 {

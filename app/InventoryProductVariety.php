@@ -43,6 +43,9 @@ class InventoryProductVariety extends Model
     public  function promotions(){
         return $this->hasMany('App\InventoryProductPromotion','product_variety_id');
     }
+    public function batches(){
+        return $this->hasMany('App\InventoryBatch','product_variety_id','id');
+    }
 
 
 

@@ -3,40 +3,40 @@
     <h1 >supplier / edit</h1>
 @endsection
 @section('content')
-    <div class="col-md-6" style="margin: 0 auto">
+    <div class="col-md-6" >
         {!! Form::model($supplier,['method'=>'PATCH','action'=>['SupplierController@update',$supplier->id],'class'=>'form-horizontal']) !!}
         <div class="form-group">
-            {!! Form::label('name','Name:',['class'=>'control-label col-xs-2']) !!}
-            <div class="col-xs-8">
-                {!! Form::text('name',null,['class'=>'form-control ']) !!}
-            </div>
+            {!! Form::label('name','Name:') !!}
+
+                {!! Form::text('name',null,['class'=>'form-input ']) !!}
+
         </div>
         <div class="form-group">
-            {!! Form::label('address','Address:',['class'=>'control-label col-xs-2']) !!}
-            <div class="col-xs-10">
-                {!! Form::text('address',null,['class'=>'form-control']) !!}
-            </div>
+            {!! Form::label('address','Address:') !!}
+
+                {!! Form::text('address',null,['class'=>'form-input']) !!}
+
         </div>
         <div class="form-group">
-            {!! Form::label('location','Location:',['class'=>'control-label col-xs-2']) !!}
-            <div class="col-xs-10">
-                {!! Form::text('location',null,['class'=>'form-control']) !!}
-            </div>
+            {!! Form::label('location','Location:') !!}
+
+                {!! Form::text('location',null,['class'=>'form-input']) !!}
+
         </div>
         <div class="form-group">
-            {!! Form::label('telephone','Telephone:',['class'=>'control-label col-xs-2']) !!}
-            <div class="col-xs-10">
-                {!! Form::text('telephone',null,['class'=>'form-control']) !!}
-            </div>
+            {!! Form::label('telephone','Telephone:') !!}
+
+                {!! Form::text('telephone',null,['class'=>'form-input']) !!}
+
         </div>
         <div class="form-group">
-            {!! Form::label('email','Email:',['class'=>'control-label col-xs-2']) !!}
-            <div class="col-xs-10">
-                {!! Form::text('email',null,['class'=>'form-control']) !!}
-            </div>
+            {!! Form::label('email','Email:') !!}
+
+                {!! Form::text('email',null,['class'=>'form-input']) !!}
+
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary form-control">Create</button>
+            <button type="submit" class="btn btn-primary ">Create</button>
         </div>
         {!! Form::close() !!}
     </div>

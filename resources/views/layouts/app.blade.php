@@ -32,14 +32,18 @@
         <h1> <span><i class="fa fa-warehouse"></i></span> inventory</h1>
 
             <ul id="links">
-                <li><a href=""><i class="fa fa-home "></i>Dashboard</a></li>
+                <li><a href="{{route('home.index')}}"><i class="fa fa-home "></i>Dashboard</a></li>
                 <li><a href="{{route('brand.index')}}"><i class="fa fa-coins "></i>Brands</a></li>
                 <li><a href="{{route('category.index')}}"> <i class="fa fa-calendar-times"></i>Categories</a></li>
                 <li><a href="{{route('supplier.index')}}"><i class="fa fa-bus"></i>Suppliers</a></li>
                 <li><a href="{{route('product.index')}}"><i class="fa fa-archive"></i>Products</a></li>
                 <li><a href="{{route('item.index')}}"><i class="fa fa-fire"></i>Items</a></li>
                 <li><a href="{{route('order.index')}}"><i class="fa fa-dolly"></i>Orders</a></li>
-                <li><a href="{{route('warehouse.index')}}"><i class="fa fa-warehouse"></i>Warehouses</a></li>
+                <li><a href="{{route('batch.index')}}"><i class="fa fa-balance-scale"></i>Batches</a></li>
+                <li><a href="{{route('transfer.index')}}"><i class="fa fa-balance-scale"></i>Transfers</a></li>
+                <li><a href="{{route('price.index')}}"><i class="fa fa-coins"></i>Prices</a></li>
+                <li><a href="{{route('stock.index')}}"><i class="fa fa-circle-notch"></i>Reorder</a></li>
+
 
             </ul>
 
@@ -47,7 +51,7 @@
     </div>
     <div id="content">
         <nav id="bar">
-            <span><a href="" ><i class="fa fa-user-cog"></i></a> </span>
+            <span><a href="{{route('logout')}}" ><i class="fa fa-user-cog"></i></a> </span>
             <input type="search"  placeholder="Search..." name="search" id="search" />
         </nav>
         <div id="secondary">

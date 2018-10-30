@@ -7,12 +7,15 @@ use App\InventoryProduct;
 use App\InventoryProductGroup;
 use App\InventoryBrand;
 use App\InventoryProductVariety;
+use App\InventoryPrice;
+use App\InventorySetting;
 
 
 class ItemController extends Controller
 {
     public $brands=[];
     public $products=[];
+    public $prices=[];
     /**
      * Display a listing of the resource.
      *
@@ -94,15 +97,18 @@ class ItemController extends Controller
         $items=$product->varieties()->get();
         $reorder=[];
         $stock=[];
+        $prices=[];
+        $currency=InventorySetting::where('name','currency')->pluck('value');
+
         foreach($items as $item){
-            $reorder[$item->id]=InventoryProductVariety::find($item->id)->warehouses()->sum('reorder_level');
-            $stock[$item->id]=InventoryProductVariety::find($item->id)->warehouses()->sum('stock_level');
+            $stock[$item->id]=InventoryProductVariety::find($item->id)->batches()->sum('stock_level');
+            $prices[$item->id]=InventoryProductVariety::find($item->id)->batches()->first()->prices()->pluck('product_price');
 
         }
 
 
 
-        return view('item.show',compact('items','product','reorder','stock'));
+        return view('item.show',compact('items','product','reorder','stock','prices','currency'));
 
     }
 

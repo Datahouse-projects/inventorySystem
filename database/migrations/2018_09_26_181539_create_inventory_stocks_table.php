@@ -16,9 +16,7 @@ class CreateInventoryStocksTable extends Migration
         Schema::create('inventory_stocks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_variety_id');
-            $table->integer('warehouse_id');
-            $table->double('stock_level');
-            $table->double('reorder_level');
+            $table->integer('reorder_level');
             $table->timestamps();
         });
     }

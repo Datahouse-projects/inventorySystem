@@ -62,11 +62,11 @@ body{
 
 #content{
     width: 80%;
-    height: 100vh;
-    padding:0.8rem;
+    height:auto;
     background: #eef1f5;
-    padding:0;
-    overflow: scroll;
+    overflow:auto;
+
+
 
 }
 #content #bar{
@@ -106,14 +106,96 @@ body{
 
 }
 #menu{
-    padding:1.2rem;
+    padding:0;
+    position: relative;
 }
 #table{
     background:#ffffff;
+    margin:1.2rem;
 }
-
+#details{
+    border:1px solid #eef1f5;
+}
 #add{
     position:relative;
     float:right;
-    margin:0.6rem 0.4rem;
+    margin:0.6rem 1.6rem;
+}
+#info{
+    display:flex;
+    height:27vh;
+    padding:1.5rem 0 1.2rem 1.2rem;
+}
+#general-info{
+
+}
+.info-details{
+    width:23%;
+    background:white;
+    height:8rem;
+    float:left;
+    margin-right:1.5rem;
+    border-radius:0.3rem;
+    align-items: center;
+    justify-content: center;
+    color:#2f3d53;
+    padding:1rem;
+
+}
+.sign {
+    margin-top: 0.5rem;
+
+}
+.sign1{
+    font-size: 1.5rem;
+}
+
+.sign a i{
+font-size:2rem;
+}
+.info-details:last-child{
+    margin-right:0;
+    
+}
+.form-input{
+    border-radius:0.3rem;
+    width:70%;
+    box-shadow:none;
+    height:2.4rem;
+    border:1px solid #eaebe8;
+    padding:0.2rem 1rem;
+    position:relative;
+    float:right;
+    background:white;
+    right:2.8rem;
+
+}
+.form-group{
+    margin:2rem 0;
+}
+#product-info{
+    display: flex;
+    padding:1.2rem 1.6rem 0 1.6rem;
+    height: 59vh;
+    background: white;
+    margin:0;
+    font-size:0.9rem;
+
+}
+#product-details{
+    width:40%;
+}
+
+.form-input:hover{
+    border-color: #227dc7;
+}
+.detail-header{
+    text-transform: uppercase;
+
+}
+.detail-item{
+    text-transform: capitalize;
+}
+.header{
+    border-bottom:1px solid #eef1f5;
 }

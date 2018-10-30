@@ -3,14 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class InventoryStock extends  Pivot
+
+
+class InventoryStock extends  Model
 {
     protected $fillable=[
         'product_variety_id',
-        'warehouse_id',
-        'stock_level',
-        'reorder_level'
+        'reorder_level',
+
     ];
+    public function products(){
+        return $this->belongsTo('App\InventoryProductVariety','product_variety_id');
+    }
+
 }
