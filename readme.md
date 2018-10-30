@@ -31,6 +31,13 @@ If you're not in the mood to read, [Laracasts](https://laracasts.com) contains o
 
 We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
 
+##user login details
+To access the system migrate all tables
+seed data to tables
+register new user;
+
+
+
 - **[Vehikl](https://vehikl.com/)**
 - **[Tighten Co.](https://tighten.co)**
 - **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
